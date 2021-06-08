@@ -1,9 +1,14 @@
 import React from 'react';
 
-const Video = () => {
+const Video = ({videoId}) => {
+
+    const YOUTUBE_URL = 'https://www.youtube.com/embed/';
     return (
         <div>
-            <h2>Video</h2>
+            <iframe   
+            width="600"
+            height="400"
+            src={`${YOUTUBE_URL}${videoId}`} />
         </div>
     )
 }

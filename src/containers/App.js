@@ -28,7 +28,7 @@ class App extends Component {
   initMovies(){
     axios.get(`${API_END_POINT}${POPULAR_MOVIES_URL}&${API_KEY}`).then(function(response){
       this.setState({
-        movieList : response.data.results.slice(1, 6),  
+        movieList : response.data.results.slice(1, 10),  
         currentMovie : response.data.results[0] }, function(){
           this.applyCurrentVideo();
         });
@@ -38,7 +38,11 @@ class App extends Component {
 
   applyCurrentVideo(){
       axios.get(`${API_END_POINT}movie/${this.state.currentMovie.id}?${API_KEY}&append_to_response=videos&include_adult=false`).then(function(response){
-          console.log('---- Movie current ----', response)
+          console.log('---- Movie current ----', response);
+          const youtubeKey = response.data.videos.results[0].key;
+          let newCurrentMovieState = this.state.currentMovie;
+          newCurrentMovieState.videoId = youtubeKey;
+          this.setState({currentMovie : newCurrentMovieState });
       }.bind(this));
   }
 
@@ -52,12 +56,18 @@ class App extends Component {
 
       return (
         <div className="App">
-          <header className="App-header">
-            <h1>Bienvenue sur <b>Le petit cinoche</b></h1>
-            <SearchBar />
-            {renderVideoList()}
-            <VideoDetail title={this.state.currentMovie.title} description={this.state.currentMovie.overview} date={this.state.currentMovie.release_date}/>
-       </header>
+                    <h1>Le Petit Cinoche</h1>
+
+          <SearchBar className="SearchBar" />
+          <div className="App-main">
+              <header className="App-header">
+              <Video videoId={this.state.currentMovie.videoId} />
+                <VideoDetail title={this.state.currentMovie.title} description={this.state.currentMovie.overview} image={this.state.currentMovie.poster_path} date={this.state.currentMovie.release_date}/>
+              </header>
+              <aside>       
+                {renderVideoList()}
+              </aside>
+          </div>
         </div>
       );
     }

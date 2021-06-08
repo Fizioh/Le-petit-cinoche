@@ -11,7 +11,7 @@ class SearchBar extends Component {
                 <input
                     type="text"
                 />
-                <button>Go</button>
+                <button>Rechercher</button>
             </div>
         )
     }
