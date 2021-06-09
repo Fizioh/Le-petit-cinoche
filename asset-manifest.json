@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/le-petit-cinoche/static/css/main.f68059ea.chunk.css",
+    "main.js": "/le-petit-cinoche/static/js/main.2507cdf9.chunk.js",
+    "main.js.map": "/le-petit-cinoche/static/js/main.2507cdf9.chunk.js.map",
+    "runtime-main.js": "/le-petit-cinoche/static/js/runtime-main.183bf759.js",
+    "runtime-main.js.map": "/le-petit-cinoche/static/js/runtime-main.183bf759.js.map",
+    "static/js/2.55495ea7.chunk.js": "/le-petit-cinoche/static/js/2.55495ea7.chunk.js",
+    "static/js/2.55495ea7.chunk.js.map": "/le-petit-cinoche/static/js/2.55495ea7.chunk.js.map",
+    "static/js/3.0335354f.chunk.js": "/le-petit-cinoche/static/js/3.0335354f.chunk.js",
+    "static/js/3.0335354f.chunk.js.map": "/le-petit-cinoche/static/js/3.0335354f.chunk.js.map",
+    "index.html": "/le-petit-cinoche/index.html",
+    "static/css/main.f68059ea.chunk.css.map": "/le-petit-cinoche/static/css/main.f68059ea.chunk.css.map",
+    "static/js/2.55495ea7.chunk.js.LICENSE.txt": "/le-petit-cinoche/static/js/2.55495ea7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.183bf759.js",
+    "static/js/2.55495ea7.chunk.js",
+    "static/css/main.f68059ea.chunk.css",
+    "static/js/main.2507cdf9.chunk.js"
+  ]
+}
