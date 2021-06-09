@@ -6,9 +6,9 @@ const VideoDetail = (props) => {
 
     return (
         <div>
-            <h2>{props.title}</h2>
+            <h1>{props.title}</h1>
             <p>{props.description}</p>
-            <img height="250px" width="250px" src={`${IMAGE_PATH}${props.image}`} />
+            <img height="200px" width="200px" src={`${IMAGE_PATH}${props.image}`} />
         </div>
     )
 }

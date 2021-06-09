@@ -6,7 +6,7 @@ const Video = ({videoId}) => {
     return (
         <div>
             <iframe   
-            width="600"
+            width="700"
             height="400"
             src={`${YOUTUBE_URL}${videoId}`} />
         </div>

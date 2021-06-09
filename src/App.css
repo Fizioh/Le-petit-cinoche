@@ -1,13 +1,16 @@
 .App {
   background-color: #18191b;
   text-align: center;
-  padding: 1%;
-
+  padding: 0.5%;
+  padding-right: 2%;
 }
-.App-main{
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+}
+
+.App-main {
   display: flex;
   justify-content: space-between;
-
 }
 aside {
   color: white;
@@ -26,7 +29,7 @@ iframe {
 p {
   max-width: 700px;
   font-size: 16px;
-  padding: 5%;
+  padding: 8%;
 }
 input {
   margin: 25px;
@@ -38,18 +41,37 @@ input {
 button {
   border-radius: 20px;
   padding: 10px;
-  background-color:rgb(207, 43, 43);
+  background-color: rgb(207, 43, 43);
   color: white;
 }
+.visible-scrollbar {
+  width: 300px;
+  height: 550px;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: 10px;
+}
+
 
 .App-header {
   min-height: 100vh;
   display: flex;
+  max-width: 60%;
   color: white;
+  padding-left: 15%;
 }
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
   color: rgb(207, 43, 43);
 }
+
+aside {
+  padding-right: 1.3%;
+  max-height: 300px;
+}
+
 
 
 @keyframes App-logo-spin {
