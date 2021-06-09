@@ -1,7 +1,7 @@
 {
   "name": "le-petit-cinoche",
   "version": "0.1.0",
-  "homepage": "http://fizioh.github.io/Le-petit-cinoche",
+  "homepage": "https://fizioh.github.io/Le-petit-cinoche",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.13.0",
