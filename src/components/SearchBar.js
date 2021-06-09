@@ -4,7 +4,7 @@ class SearchBar extends Component {
     constructor(props) {
         super(props);
        this.state = {
-        placeholder: 'Search Bar',
+        placeholder: 'Recherche un film',
         inputValue: ''
         }
     }
@@ -17,10 +17,10 @@ class SearchBar extends Component {
                 <input
                     type="text"
                     onChange={this.handleChange.bind(this)}
-                    plcaholder={this.state.placeholder}
+                    placeholder={this.state.placeholder}
                 />
 
-                <button onClick={this.handleClick.bind(this)}>Rechercher</button>
+                <button onClick={this.handleClick.bind(this)}>Go !</button>
             </div>
         )
     }
