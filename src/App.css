@@ -1,5 +1,5 @@
 .App {
-  background-color: #18191b;
+  background-color: #1a1b1d;
   text-align: center;
   padding: 0.5%;
   padding-right: 2%;
@@ -48,7 +48,6 @@ button {
   width: 300px;
   height: 550px;
   overflow-y: scroll;
-  scrollbar-color: rebeccapurple green;
   scrollbar-width: 10px;
 }
 

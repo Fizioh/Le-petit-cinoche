@@ -10,8 +10,7 @@ import axios from 'axios';
 const API_KEY = 'api_key=b378aacdd49ce64fd098ba4cce6be755';
 const API_END_POINT = 'https://api.themoviedb.org/3/';
 const POPULAR_MOVIES_URL = 'discover/movie?language=fr&sort_by=popularity.desc&include_adult=false&append_to_response=images';
-const IMAGE_PATH = 'https://image.tmdb.org/t/p/w300';
-
+const SEARCH_URL = "search/movie?language=fr&include_adult=false";
 class App extends Component {
 
   constructor(props){
@@ -47,11 +46,27 @@ class App extends Component {
   }
 
 
-  recevoirCallback(movie){
-    this.setState({currentMovie: movie}, () => {
-      this.applyCurrentVideo();
-    })
-  }
+    recevoirCallback(movie){
+      this.setState({currentMovie: movie}, () => {
+        this.applyCurrentVideo();
+      })
+    }
+
+    onClickSearch(searchText){
+      axios.get(`${API_END_POINT}${SEARCH_URL}&${API_KEY}&query=${searchText}`).then(function(response){
+            console.log('--- Movie Search --------', response);
+
+            if(response.data && response.data.results[0]){
+
+              if(response.data.results[0].id !== this.state.currentMovie.id){
+                  this.setState({currentMovie: response.data.results[0]}, () => {
+                    this.applyCurrentVideo();
+                  })
+              }
+
+            }
+        }.bind(this));
+      }
     render (){
 
 
@@ -66,7 +81,7 @@ class App extends Component {
         <div className="App">
                     <h1>Le Petit Cinoche</h1>
 
-          <SearchBar className="SearchBar" />
+          <SearchBar callback={this.onClickSearch.bind(this)} />
           <div className="App-main">
               <header className="App-header">
               <Video videoId={this.state.currentMovie.videoId} />
