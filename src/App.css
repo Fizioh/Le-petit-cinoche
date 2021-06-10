@@ -3,6 +3,8 @@
   text-align: center;
   padding: 0.5%;
   padding-right: 2%;
+  padding-left: 2%;
+
 }
 ::-webkit-scrollbar {
   width: 0;  /* Remove scrollbar space */

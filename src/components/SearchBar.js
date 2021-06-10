@@ -4,7 +4,7 @@ class SearchBar extends Component {
     constructor(props) {
         super(props);
        this.state = {
-        placeholder: 'Recherche un film',
+        placeholder: 'Rechercher un film',
         inputValue: ''
         }
     }

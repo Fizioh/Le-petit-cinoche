@@ -49,7 +49,16 @@ class App extends Component {
     recevoirCallback(movie){
       this.setState({currentMovie: movie}, () => {
         this.applyCurrentVideo();
+        this.setRecommendation();
+
       })
+    }
+
+    setRecommendation(){
+      axios.get(`${API_END_POINT}movie/${this.state.currentMovie.id}/recommendations?${API_KEY}&language=fr`).then(function(response){
+          this.setState(
+            {movieList: response.data.results.slice(0, 5)}
+          )}.bind(this));
     }
 
     onClickSearch(searchText){
@@ -61,6 +70,7 @@ class App extends Component {
               if(response.data.results[0].id !== this.state.currentMovie.id){
                   this.setState({currentMovie: response.data.results[0]}, () => {
                     this.applyCurrentVideo();
+                    this.setRecommendation();
                   })
               }
 
