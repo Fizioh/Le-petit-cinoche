@@ -3,17 +3,17 @@ import React from 'react';
 const IMAGE_PATH = 'https://image.tmdb.org/t/p/w300';
 
 
-const VideoListItem = (props) => {
+const TopRated = (props) => {
 
 const { movie } = props;
 
 
     return (
-        <li className="list-group-item" onClick={handleClick}>  
+        <li className="topRatedItem" onClick={handleClick}>  
             <div className="media">
 
                 <div className="media-left">
-                <img height="150px" width="120px" src={`${IMAGE_PATH}${movie.poster_path}`} />
+                <img height="130px" width="115px" src={`${IMAGE_PATH}${movie.poster_path}`} />
                 </div>
 
                 <div className="media-body">
@@ -31,4 +31,4 @@ const { movie } = props;
     }
 }
 
-export default VideoListItem
+export default TopRated

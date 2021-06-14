@@ -6,7 +6,7 @@ const VideoList = (props) => {
 
     return (
     <div class="visible-scrollbar">
-        <ul >
+        <ul>
         {  movieList.map(movie => {
              return  <VideoListItem key={movie.id} movie={movie} callback={recevoirCallback}/>
             }) 
