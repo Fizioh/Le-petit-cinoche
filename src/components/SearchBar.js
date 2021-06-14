@@ -14,6 +14,7 @@ class SearchBar extends Component {
     render(){
         return (
             <div>
+
                 <input
                     type="text"
                     onChange={this.handleChange.bind(this)}
@@ -21,7 +22,9 @@ class SearchBar extends Component {
                 />
 
                 <button onClick={this.handleClick.bind(this)}>Go !</button>
+                
             </div>
+
         )
     }
     handleClick(){

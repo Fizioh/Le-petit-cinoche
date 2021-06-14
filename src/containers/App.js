@@ -11,6 +11,8 @@ const API_KEY = 'api_key=b378aacdd49ce64fd098ba4cce6be755';
 const API_END_POINT = 'https://api.themoviedb.org/3/';
 const POPULAR_MOVIES_URL = 'discover/movie?language=fr&sort_by=popularity.desc&include_adult=false&append_to_response=images';
 const TOP_RATED_MOVIES_URL = 'discover/movie?language=fr&sort_by=vote_average.desc&include_adult=false&sort_by=vote_count.desc&append_to_response=images';
+const LATEST_MOVIES_URL = 'discover/movie?language=fr-FR&primary_release_year=2021&sort_by=realease_date.desc&region=fr&include_adult=false&append_to_response=image';
+const ANIMATION_MOVIES_URL = 'discover/movie?language=fr&with_genres=16&sort_by=vote_average.desc&vote_count.gte=10&region=fr&append_to_response=images';
 const SEARCH_URL = "search/movie?language=fr&include_adult=false";
 class App extends Component {
 
@@ -19,6 +21,7 @@ class App extends Component {
     this.state= {
       movieList: {},
       topRatedList: {},
+      latestList: {},
       currentMovie: {}
     };
   }
@@ -26,6 +29,7 @@ class App extends Component {
   componentWillMount(){
     this.initMovies();
     this.initTopRated();
+    this.initLatest();
   }
   initMovies(){
     axios.get(`${API_END_POINT}${POPULAR_MOVIES_URL}&${API_KEY}`).then(function(response){
@@ -40,10 +44,21 @@ class App extends Component {
   initTopRated(){
     axios.get(`${API_END_POINT}${TOP_RATED_MOVIES_URL}&${API_KEY}`).then(function(response){
         this.setState({
-          topRatedList: response.data.results.slice(0, 8)
+          topRatedList: response.data.results.slice(0, 4)
         });
     }.bind(this));
   }
+
+  initLatest(){
+    axios.get(`${API_END_POINT}${LATEST_MOVIES_URL}&${API_KEY}`).then(function(response){
+        const result = response.data.results.slice(0, 16);
+        //const newResult = result.sort(() => Math.random() - Math.random()).slice(0, 16)
+        this.setState({
+          latestList: result
+        });
+    }.bind(this));
+  }
+
 
   applyCurrentVideo(){
       axios.get(`${API_END_POINT}movie/${this.state.currentMovie.id}?${API_KEY}&append_to_response=videos&include_adult=false`).then(function(response){
@@ -96,14 +111,14 @@ class App extends Component {
         }
       }
       const renderCategoryList = () => {
-        if(this.state.topRatedList.length >= 5){
-          return <CategoryList topRatedList={this.state.topRatedList} callback={this.recevoirCallback.bind(this)}/>
+        if(this.state.topRatedList.length >= 4 & this.state.latestList.length >= 5){
+          return <CategoryList latestList={this.state.latestList} topRatedList={this.state.topRatedList} callback={this.recevoirCallback.bind(this)}/>
         }
       }
 
       return (
         <div className="App">
-                     <h1>Le Petit Cinoche</h1>
+                     <h1 class="title">Le Petit Cinoche</h1>
           <div className="App-main">
               <header className="App-header">
               <Video videoId={this.state.currentMovie.videoId} />

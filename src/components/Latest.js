@@ -3,7 +3,7 @@ import React from 'react';
 const IMAGE_PATH = 'https://image.tmdb.org/t/p/w300';
 
 
-const TopRated = (props) => {
+const Latest = (props) => {
 
 const { movie } = props;
 
@@ -31,4 +31,4 @@ const { movie } = props;
     }
 }
 
-export default TopRated
+export default Latest

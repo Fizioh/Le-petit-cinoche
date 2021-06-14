@@ -3,6 +3,13 @@
   text-align: center;
   padding: 0.5%;
 }
+ h1 {
+  text-align: left;
+}
+.title {
+  margin-left: 150px;
+  color:rgb(214, 36, 36);
+}
 
 ::-webkit-scrollbar {
   width: 0;  /* Remove scrollbar space */
@@ -34,15 +41,19 @@ p {
 }
 input {
   margin: 25px;
-  width: 300px;
+  width: 180px;
   height: 20px;
   border-radius: 30px;
 }
 
+input::placeholder {
+  text-align: center;
+}
+
 button {
   border-radius: 20px;
-  padding: 10px;
-  background-color: rgb(207, 43, 43);
+  padding: 8px;
+  background-color: rgb(175, 39, 39);
   color: white;
 }
 .visible-scrollbar {
@@ -62,7 +73,18 @@ button {
 h1,
 h2,
 h3 {
-  color: rgb(207, 43, 43);
+  color: rgb(175, 45, 45);
+}
+
+
+h4 {
+  min-width: 150px;
+  max-width: 150px;
+  color: white;
+}
+
+.description {
+  max-height: 350px;
 }
 
 aside {
@@ -70,29 +92,34 @@ aside {
   margin-top: -55px;
 }
 
-.top-rated-list {
+.rated-list {
   display: flex;
   flex-direction: row;
   width: 90%;
   margin: auto;
   overflow-y: scroll;
   scrollbar-width: 10px;
-  padding-left: 0%;
 }
+
 
 h5 {
   color: white;
 }
 .titleList {
-  text-align: left;
-  padding-left: 2%;
+  padding-right: 2.5%;
 }
+
 .topRatedItem {
   display:inline;
-  padding-right: 30px;
+  padding-right: 95px;
 }
 .App-footer {
-  margin-top: -250px;
+  margin-top: -400px;
+
+}
+.footer {
+  max-width: 57%;
+  justify-content: left;
 }
 
 
