@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Le-petit-cinoche/static/css/main.7a64aba1.chunk.css",
-    "main.js": "/Le-petit-cinoche/static/js/main.19b9579a.chunk.js",
-    "main.js.map": "/Le-petit-cinoche/static/js/main.19b9579a.chunk.js.map",
+    "main.css": "/Le-petit-cinoche/static/css/main.63d6d5ef.chunk.css",
+    "main.js": "/Le-petit-cinoche/static/js/main.0b07491f.chunk.js",
+    "main.js.map": "/Le-petit-cinoche/static/js/main.0b07491f.chunk.js.map",
     "runtime-main.js": "/Le-petit-cinoche/static/js/runtime-main.e0cdcf87.js",
     "runtime-main.js.map": "/Le-petit-cinoche/static/js/runtime-main.e0cdcf87.js.map",
-    "static/js/2.7352f9c9.chunk.js": "/Le-petit-cinoche/static/js/2.7352f9c9.chunk.js",
-    "static/js/2.7352f9c9.chunk.js.map": "/Le-petit-cinoche/static/js/2.7352f9c9.chunk.js.map",
+    "static/js/2.1d9077ef.chunk.js": "/Le-petit-cinoche/static/js/2.1d9077ef.chunk.js",
+    "static/js/2.1d9077ef.chunk.js.map": "/Le-petit-cinoche/static/js/2.1d9077ef.chunk.js.map",
     "static/js/3.0335354f.chunk.js": "/Le-petit-cinoche/static/js/3.0335354f.chunk.js",
     "static/js/3.0335354f.chunk.js.map": "/Le-petit-cinoche/static/js/3.0335354f.chunk.js.map",
     "index.html": "/Le-petit-cinoche/index.html",
-    "static/css/main.7a64aba1.chunk.css.map": "/Le-petit-cinoche/static/css/main.7a64aba1.chunk.css.map",
-    "static/js/2.7352f9c9.chunk.js.LICENSE.txt": "/Le-petit-cinoche/static/js/2.7352f9c9.chunk.js.LICENSE.txt"
+    "static/css/main.63d6d5ef.chunk.css.map": "/Le-petit-cinoche/static/css/main.63d6d5ef.chunk.css.map",
+    "static/js/2.1d9077ef.chunk.js.LICENSE.txt": "/Le-petit-cinoche/static/js/2.1d9077ef.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e0cdcf87.js",
-    "static/js/2.7352f9c9.chunk.js",
-    "static/css/main.7a64aba1.chunk.css",
-    "static/js/main.19b9579a.chunk.js"
+    "static/js/2.1d9077ef.chunk.js",
+    "static/css/main.63d6d5ef.chunk.css",
+    "static/js/main.0b07491f.chunk.js"
   ]
 }
